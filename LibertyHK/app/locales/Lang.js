@@ -3,14 +3,15 @@ import I18n from 'react-native-i18n';
 
 // Import all locales
 import en from './en';
-import es from './es';
 import zh from './zh';
 
 // Should the app fallback to English if user locale doesn't exists
 // If an english translation is not available in en.js,
 // it will look inside hi.js
 I18n.fallbacks = true;
-// It will convert HOME_noteTitle to "HOME note title" if the value of HOME_noteTitle doesn't exist in any of the translation files.
+// It will convert HOME_noteTitle to
+// "HOME note title" if the value of HOME_noteTitle
+// doesn't exist in any of the translation files.
 I18n.missingBehaviour = 'guess';
 // If the current locale in device is not en or hi
 I18n.defaultLocale = 'en';
@@ -20,13 +21,12 @@ I18n.locale = 'en';
 // Define the supported translations
 I18n.translations = {
   en,
-  es,
-  zh
+  zh,
 };
 
 const currentLocale = I18n.currentLocale();
 
-export const setLocale = (locale) => {
+export const setLocale = locale => {
   I18n.locale = locale;
 };
 
@@ -45,8 +45,6 @@ export function strings(name, params = {}) {
 }
 
 // export default Lang;
-
-
 
 // List of countries with country code
 /*

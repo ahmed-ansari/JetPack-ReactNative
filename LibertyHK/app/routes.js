@@ -3,42 +3,32 @@ import React, { Component } from 'react';
 // import { Linking } from 'react-native';
 // import { connect } from 'react-redux';
 import { Router, Scene, Actions, Stack } from 'react-native-router-flux';
-import LoginComponent from './screens/login'
+import LoginComponent from './screens/login';
 
 class Routes extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-    }
+    this.state = {};
   }
-  componentDidUpdate(prevProps) {
 
-  }
-  componentDidMount(){
+  componentDidMount() {}
 
-  }
-  shouldComponentUpdate(nextProps,nextState){
+  shouldComponentUpdate(/* nextProps,nextState */) {}
 
-  }
-  componentWillUnmount(){
+  componentDidUpdate(/* prevProps */) {}
 
-  }
-  componentDidCatch(error,errorInfo){
+  componentWillUnmount() {}
 
-  }
+  componentDidCatch(/* error,errorInfo */) {}
 
   render() {
     return (
       <Router>
-      <Stack key="root">
-        <Scene
-        key="launch"
-        component={LoginComponent}
-        initial
-        />
+        <Stack key="root">
+          <Scene key="launch" component={LoginComponent} initial />
         </Stack>
       </Router>
-    )
+    );
   }
 }
 

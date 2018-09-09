@@ -1,39 +1,26 @@
-import React , {Component} from 'react';
+import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import Routes from './routes';
 
-
 class AppRootComponent extends Component {
 
-  componentDidUpdate(prevProps) {
+  componentDidMount() {}
 
-  }
-  componentDidMount(){
+  shouldComponentUpdate(nextProps, nextState) {}
 
-  }
-  shouldComponentUpdate(nextProps,nextState){
+  componentDidUpdate(prevProps) {}
 
-  }
-  componentWillUnmount(){
+  componentWillUnmount() {}
 
-  }
-  componentDidCatch(error,errorInfo){
-
-  }
+  componentDidCatch(error, errorInfo) {}
 
   render() {
-    return (
-    <Routes/>
-    )
+    return <Routes />;
   }
 }
 
 export default connect(
-  state => ({
-
-  }),
-  dispatch => ({
-
-  }),
+  state => ({}),
+  dispatch => ({}),
 )(AppRootComponent);
