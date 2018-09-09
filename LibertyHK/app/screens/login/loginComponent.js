@@ -3,7 +3,7 @@ import {
     View,
     Text
   } from 'react-native';
-import Styles from './styles'
+import { styles }from './styles'
 
 
 class LoginComponent extends Component {
@@ -18,11 +18,9 @@ class LoginComponent extends Component {
 
     render(){
         return(
-            <View style={Styles.viewStyle}>
-              <View style={{alignItems:'center',justifyContent:'center'}} >
-                <Text>Welcome to Liberty</Text>
-                </View>
-            </View>
+          <View style={styles.viewStyle}>
+            <Text>Welcome to Liberty</Text>
+          </View>
         );
     }
 }
