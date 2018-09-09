@@ -4,17 +4,24 @@ import I18n from 'react-native-i18n';
 // Import all locales
 import en from './en';
 import es from './es';
+import zh from './zh';
 
 // Should the app fallback to English if user locale doesn't exists
-I18n.fallbacks = true; // If an english translation is not available in en.js, it will look inside hi.js
-I18n.missingBehaviour = 'guess'; // It will convert HOME_noteTitle to "HOME note title" if the value of HOME_noteTitle doesn't exist in any of the translation files.
-I18n.defaultLocale = 'en'; // If the current locale in device is not en or hi
-I18n.locale = 'en'; // If we do not want the framework to use the phone's locale by default
+// If an english translation is not available in en.js,
+// it will look inside hi.js
+I18n.fallbacks = true;
+// It will convert HOME_noteTitle to "HOME note title" if the value of HOME_noteTitle doesn't exist in any of the translation files.
+I18n.missingBehaviour = 'guess';
+// If the current locale in device is not en or hi
+I18n.defaultLocale = 'en';
+// If we do not want the framework to use the phone's locale by default
+I18n.locale = 'en';
 
 // Define the supported translations
 I18n.translations = {
   en,
   es,
+  zh
 };
 
 const currentLocale = I18n.currentLocale();
@@ -38,3 +45,56 @@ export function strings(name, params = {}) {
 }
 
 // export default Lang;
+
+
+
+// List of countries with country code
+/*
+Supported languages (ISO 639-1)
+ar: Arabic
+az: Azerbaijani
+be: Belorussian
+bg: Bulgarian
+bs: Bosnian
+ca: Catalan
+cs: Czech
+da: Danish
+de: German
+en: English
+es: Spanish
+et: Estonian
+fa: Persian
+fi: Finnish
+fr: French
+el: Greek
+he: Hebrew
+hr: Croatian
+hu: Hungarian
+hy: Armenian
+it: Italian
+id: Indonesian
+ja: Japanese
+ka: Georgian
+kk: Kazakh
+ko: Korean
+ky: Kyrgyz
+lt: Lithuanian
+lv: Latvian
+mk: Macedonian
+mn: Mongolian
+nb: Norwegian Bokmål
+nl: Dutch
+nn: Norwegian Nynorsk
+pl: Polish
+pt: Portuguese
+ro: Romanian
+ru: Russian
+sk: Slovak
+sl: Slovene
+sr: Serbian
+sv: Swedish
+tr: Turkish
+uk: Ukrainian
+uz: Uzbek
+zh: Chinese
+*/

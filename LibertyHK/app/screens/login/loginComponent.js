@@ -3,6 +3,7 @@ import {
     View,
     Text
   } from 'react-native';
+import { strings } from '../../locales/Lang'
 import { styles }from './styles'
 
 
@@ -19,7 +20,7 @@ class LoginComponent extends Component {
     render(){
         return(
           <View style={styles.viewStyle}>
-            <Text>Welcome to Liberty</Text>
+            <Text>{strings('login.welcomText')}</Text>
           </View>
         );
     }
