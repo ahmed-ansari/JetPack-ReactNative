@@ -12,6 +12,12 @@ export default (state = DEFAULT_STATE, action) => {
         // login: action.data.login,
         // username:action.data.username
       };
+    case ActionTypes.LOGIN_FAILURE: // this should be changed with
+      return {
+        ...state,
+        // login: null,
+        // username:null
+      };
     default:
       return state;
   }
