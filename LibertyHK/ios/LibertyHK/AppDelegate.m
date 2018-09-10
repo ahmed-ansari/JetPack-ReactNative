@@ -18,6 +18,10 @@
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 
+  if (jsCodeLocation == nil) {
+    jsCodeLocation = [[NSURL alloc] initWithString:@"http://127.0.0.1:8088/index.bundle?platform=ios&dev=true"];
+  }
+
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
                                                       moduleName:@"LibertyHK"
                                                initialProperties:nil
@@ -29,6 +33,8 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  
+  
   return YES;
 }
 

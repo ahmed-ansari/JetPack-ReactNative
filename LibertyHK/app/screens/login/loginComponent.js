@@ -8,6 +8,8 @@ class LoginComponent extends Component {
     super(props);
 
     this.state = {};
+
+    props.login()
   }
 
   render() {

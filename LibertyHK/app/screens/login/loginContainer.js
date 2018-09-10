@@ -4,6 +4,7 @@ import * as loginActions from './loginActions';
 import { getLogin } from '../../reducers';
 
 const mapStateToProps = (state /* , props */) => {
+  // console.error(state)
   return {
     // ...getNav(state),
     ...getLogin(state),
