@@ -1,4 +1,4 @@
-export const LHCBaseURL = "https://httpbin.org/"; // TODO:Dev url
+export const LHCBaseURL = "https:"; // TODO:Dev url
 
 
-export const loginExt = "get"; // TODO:Dev url
+export const loginEndpoint = "login"; // TODO:Dev url

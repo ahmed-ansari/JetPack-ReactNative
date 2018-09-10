@@ -4,7 +4,7 @@ import { LHCBaseURL } from "./config";
 //Call post method from actions with params 
 //in body the post request body should be sent from the actions
 //in endUrl, the endpoint for the request should be sent
-export function post(endUrl, body) {
+export function postMethod(endUrl, body) {
   return axios
     .post(LHCBaseURL + endUrl, body)
     .then(response => {
@@ -20,7 +20,7 @@ export function post(endUrl, body) {
 //Call PUT method from actions with params 
 //in body the post request body should be sent from the actions
 //in endUrl, the endpoint for the request should be sent
-export function PUT(endUrl, body) {
+export function PUTMethod(endUrl, body) {
   return axios
     .put(`${LHCBaseURL}${endUrl}`, body)
     .then(response => {
@@ -35,21 +35,21 @@ export function PUT(endUrl, body) {
 
 //Call get method from actions with params 
 //in endUrl, the endpoint for the request should be sent
-export function get(endUrl) {
+export function getMethod(endUrl,payload,successCallback,errorCallback) {
   return axios
     .get(`${LHCBaseURL}${endUrl}`)
-    .then(response => ({ error: null, response }))
+    .then(response => (successCallback(response )))
     .catch(error => {
       if (error.response) {
-        return { error: error.response };
+        errorCallback(error.response)
       }
-      return error;
+        errorCallback(error)
     });
 }
 
 //Call remove method from actions with params 
 //in endUrl, the endpoint for the request should be sent
-export function remove(endUrl) {
+export function removeMethod(endUrl) {
   return axios
     .delete(`${LHCBaseURL}${endUrl}`)
     .then(response => ({ error: null, response }))
