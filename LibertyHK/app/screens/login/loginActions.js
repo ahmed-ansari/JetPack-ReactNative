@@ -1,6 +1,7 @@
 // import {Actions} from 'react-native-router-flux'
 // import * as Utils from '../../utils'
 import * as ActionTypes from '../../actionTypes';
+import {post} from '../../reducers/networkReducers/api'
 // import helper comonents as required from helpers
 
 /*
