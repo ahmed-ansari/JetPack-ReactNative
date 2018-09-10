@@ -6,7 +6,7 @@ This file is to maintain following, which to be used accross app.
 
 */
 
-const AppConstant = {
+export const AppConstant = {
   colors:{
 
   },
@@ -19,4 +19,3 @@ const AppConstant = {
 
 }
 
-export default AppConstant;
