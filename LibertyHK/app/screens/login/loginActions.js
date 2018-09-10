@@ -17,7 +17,7 @@ export const login = (data /*, Callback */) => {
     // End of this function flow dispatch action
     // and/or navigate to other screens
     //Below "get" string will be removed when the real API used
-    makeRequest(ActionTypes.login,data,(response)=>{
+    makeRequest(ActionTypes.LOGIN,data,(response)=>{
       
       dispatch({
         type: ActionTypes.LOGIN_SUCCESS,

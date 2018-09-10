@@ -4,7 +4,7 @@ import { LHCBaseURL } from "./config";
 //Call post method from actions with params 
 //in body the post request body should be sent from the actions
 //in endUrl, the endpoint for the request should be sent
-export function postMethod(endUrl, body) {
+export function post(endUrl, body) {
   return axios
     .post(LHCBaseURL + endUrl, body)
     .then(response => {
@@ -20,7 +20,7 @@ export function postMethod(endUrl, body) {
 //Call PUT method from actions with params 
 //in body the post request body should be sent from the actions
 //in endUrl, the endpoint for the request should be sent
-export function PUTMethod(endUrl, body) {
+export function PUT(endUrl, body) {
   return axios
     .put(`${LHCBaseURL}${endUrl}`, body)
     .then(response => {
@@ -35,7 +35,7 @@ export function PUTMethod(endUrl, body) {
 
 //Call get method from actions with params 
 //in endUrl, the endpoint for the request should be sent
-export function getMethod(endUrl,payload,successCallback,errorCallback) {
+export function get(endUrl,payload,successCallback,errorCallback) {
   return axios
     .get(`${LHCBaseURL}${endUrl}`)
     .then(response => (successCallback(response )))
@@ -49,7 +49,7 @@ export function getMethod(endUrl,payload,successCallback,errorCallback) {
 
 //Call remove method from actions with params 
 //in endUrl, the endpoint for the request should be sent
-export function removeMethod(endUrl) {
+export function remove(endUrl) {
   return axios
     .delete(`${LHCBaseURL}${endUrl}`)
     .then(response => ({ error: null, response }))
