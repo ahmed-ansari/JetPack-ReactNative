@@ -1,4 +1,11 @@
-export const LHCBaseURL = "https:"; // TODO:Dev url
+/*
+Configuration file to manage API Base and End URLs
+*/
+const Config = {
+    UAT:'https://',
+    PROD:'https://',
 
+    login:'loingUrl'
+}
 
-export const loginEndpoint = "login"; // TODO:Dev url
+export default Config;

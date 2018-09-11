@@ -1,3 +1,1 @@
-export function validateEmail(){
-
-}
+export function validateEmail() {}

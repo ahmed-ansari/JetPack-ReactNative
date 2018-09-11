@@ -12,7 +12,7 @@ class LoginComponent extends Component {
     //Sample API call with hardcoded username and password
     //After Successful Login props will get updated
     //the below method will be called on submit action in login page
-    props.login({username:"test",password:"XXXX"})
+    props.login({ username: 'test', password: 'XXXX' });
   }
 
   render() {

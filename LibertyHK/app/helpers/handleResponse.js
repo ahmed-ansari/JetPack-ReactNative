@@ -1,3 +1,1 @@
-export function handleAPIResponse(){
-
-}
+export function handleAPIResponse() {}

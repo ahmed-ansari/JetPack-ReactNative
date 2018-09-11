@@ -9,7 +9,6 @@ while app is getting launched.
 like,
 Initate Handshake for push notification
 Initite Handshake for Analytics
-
 */
 
 export default () => (

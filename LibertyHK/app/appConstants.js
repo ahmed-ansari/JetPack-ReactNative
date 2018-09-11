@@ -7,15 +7,7 @@ This file is to maintain following, which to be used accross app.
 */
 
 export const AppConstant = {
-  colors:{
-
-  },
-  fontSize:{
-
-  },
-  spacing:{
-
-  }
-
-}
-
+  colors: {},
+  fontSize: {},
+  spacing: {},
+};
