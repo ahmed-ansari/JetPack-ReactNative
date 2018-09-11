@@ -6,13 +6,13 @@ import Routes from './routes';
 class AppRootComponent extends Component {
   componentDidMount() {}
 
-  shouldComponentUpdate(nextProps, nextState) {}
+  shouldComponentUpdate(/* nextProps, nextState */) {}
 
-  componentDidUpdate(prevProps) {}
+  componentDidUpdate(/* prevProps */) {}
 
   componentWillUnmount() {}
 
-  componentDidCatch(error, errorInfo) {}
+  componentDidCatch(/* error, errorInfo */) {}
 
   render() {
     return <Routes />;
