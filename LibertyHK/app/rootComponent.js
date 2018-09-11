@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import Routes from './routes';
 
 class AppRootComponent extends Component {
-
   componentDidMount() {}
 
   shouldComponentUpdate(nextProps, nextState) {}

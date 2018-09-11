@@ -23,7 +23,7 @@ import {
   ActivityIndicator,
   StyleSheet,
 } from 'react-native';
-import AppConstant  from '../appConstants';
+import AppConstant from '../appConstants';
 // import GMAnalytics from '../../analytics/gm-analytics';
 
 const styles = StyleSheet.create({
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: AppConstant.spacing.large,
   },
   defaultText: {
-    fontSize:AppConstant.fontSize.small,
+    fontSize: AppConstant.fontSize.small,
     color: AppConstant.colors.primaryContrast,
     textAlign: 'center',
     flex: 1,

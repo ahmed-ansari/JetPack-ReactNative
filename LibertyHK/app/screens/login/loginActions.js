@@ -1,7 +1,7 @@
 // import {Actions} from 'react-native-router-flux'
 // import * as Utils from '../../utils'
 import * as ActionTypes from '../../actionTypes';
-import {makeRequest} from '../../network/apiInterface'
+import { makeRequest } from '../../network/apiInterface';
 // import helper comonents as required from helpers
 
 /*
@@ -17,24 +17,23 @@ export const login = (data /*, Callback */) => {
     // End of this function flow dispatch action
     // and/or navigate to other screens
     //Below "get" string will be removed when the real API used
-    makeRequest(ActionTypes.LOGIN,data,(response)=>{
-      
-      dispatch({
-        type: ActionTypes.LOGIN_SUCCESS,
-        data: response,/*{
+    makeRequest(
+      ActionTypes.LOGIN,
+      data,
+      response => {
+        dispatch({
+          type: ActionTypes.LOGIN_SUCCESS,
+          data: response /*{
           username:userInfo[0].username,login:true 
-      },*/
-      });
-
-    },(error)=>{
-
-      dispatch({
-        type: ActionTypes.LOGIN_FAILURE,
-        data: null
-      });
-      
-    })
-
-      
+      },*/,
+        });
+      },
+      error => {
+        dispatch({
+          type: ActionTypes.LOGIN_FAILURE,
+          data: null,
+        });
+      },
+    );
   };
 };
