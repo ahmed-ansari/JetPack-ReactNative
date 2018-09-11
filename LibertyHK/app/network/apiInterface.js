@@ -1,13 +1,14 @@
 import axios from "axios";
-import { loginExt } from "./config";
-import {getMethod,postMethod} from '../network/apiMethods'
-
+import { loginEndpoint } from "./config";
+import {get,post} from '../network/apiMethods'
+import * as ActionTypes from '../actionTypes';
+import {throwIfMissing} from '../helpers/CommonMethods'
 //Making Request for the given type
 //Type will identify the end url to be 
-export function makeRequest(type, payload, successCallBack, errorCallback) {
+export function makeRequest(type=throwIfMissing(), payload, successCallBack=throwIfMissing(), errorCallback=throwIfMissing()) {
   switch(type){
     case ActionTypes.LOGIN: 
-      getMethod(loginEndpoint,payload,successCallBack,errorCallback)
+      get(loginEndpoint,payload,successCallBack,errorCallback)
     break;
     default:
     break;
