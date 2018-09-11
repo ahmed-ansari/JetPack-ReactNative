@@ -15,7 +15,7 @@ export function makeRequest(
 ) {
   switch (type) {
     case ActionTypes.LOGIN:
-      get(Config.login, payload, successCallBack, errorCallback);
+        get(Config.login, payload, successCallBack, errorCallback);
       break;
     default:
       break;

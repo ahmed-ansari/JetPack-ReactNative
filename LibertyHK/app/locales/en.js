@@ -6,4 +6,9 @@ export default {
     loginButton: 'Login',
     forgotPwd: 'Forgot Password',
   },
+  touchId: {
+    popupTitle: 'Enable Fingureprint ID',
+    fallbackText: 'Show Passcode',
+    descriptionText: 'Place your finguretip on the home button to login'
+  }
 };

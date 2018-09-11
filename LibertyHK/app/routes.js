@@ -11,15 +11,15 @@ class Routes extends Component {
     this.state = {};
   }
 
-  componentDidMount() {}
+  componentDidMount() { }
 
-  shouldComponentUpdate(/* nextProps,nextState */) {}
+  shouldComponentUpdate(/* nextProps,nextState */) { }
 
-  componentDidUpdate(/* prevProps */) {}
+  componentDidUpdate(/* prevProps */) { }
 
-  componentWillUnmount() {}
+  componentWillUnmount() { }
 
-  componentDidCatch(/* error,errorInfo */) {}
+  componentDidCatch(/* error,errorInfo */) { }
 
   render() {
     return (
