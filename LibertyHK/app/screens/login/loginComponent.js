@@ -39,6 +39,7 @@ class LoginComponent extends Component {
     return (
       <View style={styles.viewStyle}>
         <Text>{strings('login.welcomText')}</Text>
+        <TouchableOpacity onPress={this.onPressFingerScan}><Text>{strings('login.welcomText')}</Text></TouchableOpacity>
       </View>
     );
   }

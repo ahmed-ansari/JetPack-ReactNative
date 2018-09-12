@@ -23,7 +23,6 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		19EA5D4427A6432CA7F50087 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC418321B244863BE3219D1 /* libRNI18n.a */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -41,12 +40,13 @@
 		3F9342CD8CDD4F2789C3CEA9 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DC378DF1F1B0429D81D8CEB8 /* Roboto.ttf */; };
 		46F19C47638E4ED894132C12 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4543B67BB0C74CB9993EA0B5 /* Foundation.ttf */; };
 		578C54B0F6AF4CC78623CBA2 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5655A043126C427EA70A5F38 /* Ionicons.ttf */; };
-		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		6537B6BF09114BB2894D9AC4 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CCD04DD12774C209CE5C82E /* Zocial.ttf */; };
 		67A50FB7B7AC4DB6863C21C5 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6C3A0A55E234F9F948DD3A3 /* EvilIcons.ttf */; };
 		684623C82F804A9A91FC49D2 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7C8CFFC60FB4EC5A4377D85 /* Entypo.ttf */; };
 		6A0FC1EBDF4C4529849E3B57 /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9B9D0CE774C14C22BBD3A9EA /* Feather.ttf */; };
-		78FB5587C98145F8B154A986 /* libTouchID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4CE1D2411245D28F320B71 /* libTouchID.a */; };
+		82628EBB2147FA5000211119 /* libTouchID.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82628EB92147C69E00211119 /* libTouchID.a */; };
+		82628EBC2147FA6600211119 /* libRNI18n.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82F6DF9C21464A41004F5CC5 /* libRNI18n.a */; };
+		82628EBD2147FBB400211119 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		9AC1B332DBE44582B1292D0A /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 82D1C4489E73499695616DFD /* rubicon-icon-font.ttf */; };
 		9D8E480C7AFB41CCB5BD8836 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8B3B0515266649A7A8E9C0CA /* Octicons.ttf */; };
@@ -415,10 +415,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82628EBD2147FBB400211119 /* libRCTAnimation.a in Frameworks */,
+				82628EBC2147FA6600211119 /* libRNI18n.a in Frameworks */,
+				82628EBB2147FA5000211119 /* libTouchID.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
-				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
-				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
 				00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */,
@@ -428,8 +429,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				19EA5D4427A6432CA7F50087 /* libRNI18n.a in Frameworks */,
-				78FB5587C98145F8B154A986 /* libTouchID.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
