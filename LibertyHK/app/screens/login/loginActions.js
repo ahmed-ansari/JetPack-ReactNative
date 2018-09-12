@@ -2,6 +2,7 @@
 // import * as Utils from '../../utils'
 import * as ActionTypes from '../../actionTypes';
 import { makeRequest } from '../../network/apiInterface';
+import { setLocale } from '../../locales/Lang'
 // import helper comonents as required from helpers
 
 /*
@@ -16,16 +17,14 @@ export const login = (data /*, Callback */) => {
     // Business logic/WS calls
     // End of this function flow dispatch action
     // and/or navigate to other screens
-    //Below "get" string will be removed when the real API used
+    // Below "get" string will be removed when the real API used
     makeRequest(
       ActionTypes.LOGIN,
       data,
       response => {
         dispatch({
           type: ActionTypes.LOGIN_SUCCESS,
-          data: response /*{
-          username:userInfo[0].username,login:true 
-      },*/,
+          data: response ,
         });
       },
       error => {
@@ -37,3 +36,9 @@ export const login = (data /*, Callback */) => {
     );
   };
 };
+
+export function changeUserLanguage(langCode){
+  return dispatch => {
+    setLocale(langCode)
+  }
+}

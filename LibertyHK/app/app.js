@@ -1,8 +1,9 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import store from './store/configureStore';
+import configureStore from './store/configureStore';
 import RootComponent from './rootComponent';
 
+const store = configureStore()
 /*
 Implement functionalities which needs to be called globally
 while app is getting launched.
