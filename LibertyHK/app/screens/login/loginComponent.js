@@ -3,7 +3,8 @@ import { View, Text, TouchableOpacity, Alert } from 'react-native';
 import PropTypes from 'prop-types'
 import { strings } from '../../locales/Lang';
 import { styles } from './styles';
-import { checkBiometricAvailability, activateTouchID } from '../../commonComponents/BiometricHandler'
+import { checkBiometricAvailability, 
+  activateTouchID } from '../../commonComponents/BiometricHandler'
 
 class LoginComponent extends Component {
   constructor(props) {
@@ -14,7 +15,6 @@ class LoginComponent extends Component {
     /* Sample API call with hardcoded username and password
     After Successful Login props will get updated
     the below method will be called on submit action in login page */
-    props.login({ username: 'test', password: 'XXXX' });
   }
 
   onPressFingerScan = () => {
