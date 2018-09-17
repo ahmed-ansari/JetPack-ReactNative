@@ -3,7 +3,17 @@ import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 import RootComponent from './rootComponent';
 
-const store = configureStore()
+/*
+place all the initial states needs to be start with app.
+*/
+const initialState = {
+  appVersion: '1.0.0',
+  env: 'UAT/PROD',
+  wsVersion: '<WS version',
+  appBuildKey: '<application key>',
+  appID: '<added appId if required>',
+};
+const store = configureStore({ initialState });
 /*
 Implement functionalities which needs to be called globally
 while app is getting launched.

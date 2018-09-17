@@ -18,12 +18,14 @@
 
   jsCodeLocation = [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"index" fallbackResource:nil];
 
+  #if DEBUG
   if (jsCodeLocation == nil) {
-    jsCodeLocation = [[NSURL alloc] initWithString:@"http://127.0.0.1:8088/index.bundle?platform=ios&dev=true"];
+    jsCodeLocation = [[NSURL alloc] initWithString:@"http://127.0.0.1:8081/index.bundle?platform=ios&dev=true"];
   }
+  #endif
 
   RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
-                                                      moduleName:@"LibertyHK"
+                                                      moduleName:@"RNTemplateProject"
                                                initialProperties:nil
                                                    launchOptions:launchOptions];
   rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
@@ -33,8 +35,6 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
-  
-  
   return YES;
 }
 

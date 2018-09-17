@@ -1,6 +1,12 @@
-rootProject.name = 'LibertyHK'
+rootProject.name = 'RNTemplateProject'
 include ':react-native-touch-id'
 project(':react-native-touch-id').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-touch-id/android')
+include ':react-native-secure-key-store'
+project(':react-native-secure-key-store').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-secure-key-store/android')
+include ':react-native-linear-gradient'
+project(':react-native-linear-gradient').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-linear-gradient/android')
+include ':react-native-rsa-native'
+project(':react-native-rsa-native').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-rsa-native/android')
 include ':react-native-i18n'
 project(':react-native-i18n').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-i18n/android')
 

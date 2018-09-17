@@ -1,9 +1,12 @@
-package com.libertyhk;
+package com.rntemplateproject;
 
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.rnfingerprint.FingerprintAuthPackage;
+import com.reactlibrary.securekeystore.RNSecureKeyStorePackage;
+import com.BV.LinearGradient.LinearGradientPackage;
+import com.RNRSA.RNRSAPackage;
 import com.AlexanderZaytsev.RNI18n.RNI18nPackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
@@ -26,6 +29,9 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new FingerprintAuthPackage(),
+            new RNSecureKeyStorePackage(),
+            new LinearGradientPackage(),
+            new RNRSAPackage(),
             new RNI18nPackage()
       );
     }
