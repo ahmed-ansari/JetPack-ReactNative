@@ -31,7 +31,16 @@ export const AppConstant = {
     purple: '#1A1446',
     yellowGradientTop: '#FFEAA8',
     yellowGradientMiddle: '#FFE280',
+    primaryLight: '#4698AA',
+    benefitCardLabel: '#C0DCE2',
+    swiperItemBg: '#F6F7F8',
+    greyColor: 'grey',
+    claimantValue: '#5F6269',
+    claimantLabel: '#94979B',
+    webViewHeadingColor: '#253d68'
+
   },
+
   fontSize: {
     primarySize: 16,
     heading2: 20,
