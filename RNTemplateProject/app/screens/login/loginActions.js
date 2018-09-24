@@ -3,7 +3,9 @@
 import * as ActionTypes from '../../actionTypes';
 import { makeRequest } from '../../network/apiInterface';
 import { setLocale } from '../../locales/Lang'
+import { SetKeyValueToStore, GetKeyValueFromStore, RemoveValueFromStore } from '../../commonComponents/GPersistantStore';
 // import helper comonents as required from helpers
+import { checkBiometricAvailability, activateTouchID } from '../../commonComponents/GBiometricHandler';
 
 /*
 Login action creator.
@@ -38,7 +40,39 @@ export const login = (data /*, Callback */) => {
 };
 
 export function changeUserLanguage(langCode){
-  return dispatch => {
+  return () => {
     setLocale(langCode)
+  }
+}
+
+export function storeSecureData(key,value,storeSuccessCallback,storeErrorCallback){
+  return ()=>{
+    SetKeyValueToStore(key,value,storeSuccessCallback,storeErrorCallback)
+  }
+}
+
+export function retrieveSecureData(key,retrieveSuccessCallback, retrieveErrorCallback){
+  return ()=>{
+    GetKeyValueFromStore(key,retrieveSuccessCallback, retrieveErrorCallback)
+  }
+}
+
+export function removeSecureData(key,removeSuccessCallback,removeErrorCallback){
+  return ()=>{
+    RemoveValueFromStore(key,removeSuccessCallback,removeErrorCallback)
+  }
+}
+
+export function isBiometricAvailable(callback){
+  return ()=>{
+     checkBiometricAvailability(callback)
+  }
+
+}
+
+export function enableBioMetricID(successCallback,errorCallback){
+  return ()=>{
+    console.log('enableBioMetricID : Actions :')
+    activateTouchID(successCallback,errorCallback)
   }
 }

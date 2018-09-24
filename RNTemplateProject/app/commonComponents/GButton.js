@@ -20,106 +20,62 @@ import {
   Text,
   View,
   TouchableOpacity,
-  ActivityIndicator,
   StyleSheet,
 } from 'react-native';
-import AppConstant from '../appConstants';
-// import GMAnalytics from '../../analytics/gm-analytics';
 
 const styles = StyleSheet.create({
   defaultButton: {
-    alignSelf: 'stretch',
-    backgroundColor: AppConstant.colors.primary,
+    // alignSelf: 'stretch',
+    backgroundColor:'#06748C',
     borderRadius: 8,
     height: 48,
-    paddingVertical: AppConstant.spacing.largeSmall,
-    paddingHorizontal: AppConstant.spacing.large,
+    paddingVertical: '5%',
+    paddingHorizontal: '5%',
   },
   defaultText: {
-    fontSize: AppConstant.fontSize.small,
-    color: AppConstant.colors.primaryContrast,
+    fontSize: 16,
+    color: 'white',
     textAlign: 'center',
     flex: 1,
   },
   container: {
-    flexDirection: 'row',
+    // flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'center',
   },
-  defaultLoader: {
-    paddingRight: AppConstant.spacing.medium,
-  },
-});
-const getButtonStyle = (disabled, setDisablePrimaryColor = false) => ({
-  ...(disabled
-    ? { backgroundColor: setDisablePrimaryColor || AppConstant.colors.primary }
-    : {}),
+
 });
 
-export const GMButton = ({
+const GButton = ({
   buttonStyle,
   textStyle,
-  loaderStyle,
   text,
-  loaderColor,
-  loaderState,
-  accessibilityLabel,
-  disabled,
-  setDisablePrimaryColor,
-  ...props
+  onPress
 }) => (
   <TouchableOpacity
-    {...props}
-    disabled={disabled}
     style={[
       styles.defaultButton,
       buttonStyle,
-      getButtonStyle(disabled, setDisablePrimaryColor),
     ]}
-    accessible
-    accessibilityLabel={`${accessibilityLabel}Container`}
-    onPress={() => {
-      props.onPress();
-
-      // new GMAnalytics().trackButtonClick(accessibilityLabel);
-    }}
+    onPress={() => {onPress()}}
   >
-    <View
-      accessible
-      style={styles.container}
-      accessibilityLabel={accessibilityLabel}
-    >
-      {loaderState && (
-        <ActivityIndicator
-          color={loaderColor}
-          style={[styles.defaultLoader, loaderStyle]}
-        />
-      )}
+    <View style={styles.container}>
       <Text style={[styles.defaultText, textStyle]}>{text.toUpperCase()}</Text>
     </View>
   </TouchableOpacity>
 );
 
-GMButton.propTypes = {
+GButton.propTypes = {
   buttonStyle: PropTypes.any,
   textStyle: PropTypes.any,
-  loaderStyle: PropTypes.any,
   text: PropTypes.string.isRequired,
-  loaderState: PropTypes.bool,
-  loaderColor: PropTypes.string,
-  accessibilityLabel: PropTypes.string.isRequired,
-  disabled: PropTypes.bool,
   onPress: PropTypes.any,
-  setDisablePrimaryColor: PropTypes.any,
 };
 
-GMButton.defaultProps = {
+GButton.defaultProps = {
   buttonStyle: {},
   textStyle: {},
-  loaderStyle: {},
-  loaderState: false,
-  loaderColor: AppConstant.colors.primaryContrast,
-  disabled: false,
   onPress: PropTypes.any,
-  setDisablePrimaryColor: false,
 };
+
+export default GButton;

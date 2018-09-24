@@ -25,6 +25,7 @@ export const AppConstant = {
     heading: '#333740',
     night: '#1A1446',
     white: '#FFF',
+    lightgray:'#F6F7F9',
     darkYellow: '#998320',
     greyBar: '#cbcdcc',
     pink: '#FF0048',
@@ -51,6 +52,19 @@ export const AppConstant = {
     title: 36,
     claimLabel: 12,
     benefitLink: 14,
+    twentyFour: 24,
+    sixteen: 16,
+    fourteen: 14,
+    twenty: 20
+
+  },
+  lineHeight: {
+    twenty: 20,
+    twentyEight: 28,
+    twentyFour: 24,
+    thirtyTwo: 32,
+    thirtySix: 36,
+    sixteen: 16,
   },
   spacing: {
     spaceTen: 10,
@@ -70,4 +84,13 @@ export const AppConstant = {
     success: 'success',
     pending: 'pending',
   },
+  menu: {
+    claimHistory: 'claimHistory',
+    myBenefits: 'myBenefits',
+    preAdmission: 'preAdmission',
+    accountSettings: 'accountSettings',
+    changeLanguage: 'changeLanguage',
+    helpSupport: 'helpSupport',
+    logout: 'logout'
+  }
 };

@@ -1,4 +1,4 @@
-/* 
+/*
 This class will have biometric authentication process methods
 This will ease the use of biometric process
 Right now this supports touch id in ios and touch id in android
@@ -16,11 +16,13 @@ Callback is a return function, used to send the status of the biometric
 and configured in the device as a bool
 */
 
+// export default class GBiometricHandler {
+
 export function checkBiometricAvailability(callback) {
   TouchID.isSupported()
     .then(biometryType => {
       /*
-            Android will receive biometryType === true. 
+            Android will receive biometryType === true.
             So the handler condition has the bool check
             */
       switch (Platform.OS) {
@@ -40,12 +42,12 @@ export function checkBiometricAvailability(callback) {
     })
     .catch(error => {
       /*
-            error -> will have specific information about the error 
+            error -> will have specific information about the error
             it may have the following error type
-            'LAErrorAuthenticationFailed' | 'LAErrorUserCancel' | 
-            'LAErrorUserFallback' | 'LAErrorSystemCancel'| 
-            'LAErrorPasscodeNotSet' | 'LAErrorTouchIDNotAvailable' | 
-            'LAErrorTouchIDNotEnrolled'| 'LAErrorTouchIDNotEnrolled' | 
+            'LAErrorAuthenticationFailed' | 'LAErrorUserCancel' |
+            'LAErrorUserFallback' | 'LAErrorSystemCancel'|
+            'LAErrorPasscodeNotSet' | 'LAErrorTouchIDNotAvailable' |
+            'LAErrorTouchIDNotEnrolled'| 'LAErrorTouchIDNotEnrolled' |
             'RCTTouchIDUnknownError' | 'RCTTouchIDNotSupported'
             */
 
@@ -58,9 +60,10 @@ This method will help the app to control the authentication process
 It will trigger the pop (system alert) to get the fingure print and validate
 In iOS it will stay in the same pop with error for 3 times
 if the fingure print is wrong and it will throw the error message
-In Android it will show the error pop on the first wrong touch itself 
+In Android it will show the error pop on the first wrong touch itself
 */
 export function activateTouchID(successCallBack, failureCallBack) {
+  console.log('activateTouchID : handler :')
   const optionalConfigObject = {
     /* Applicable only for Android */
     title: strings('touchId.popupTitle'),
@@ -69,13 +72,15 @@ export function activateTouchID(successCallBack, failureCallBack) {
     /* Applicable only for iOS (if empty, then label is hidden) */
     fallbackLabel: strings('touchId.fallbackText'),
   };
-
+  console.log('activateTouchID : handler : 2')
   TouchID.authenticate(strings('touchId.descriptionText'), optionalConfigObject)
     .then(success => {
-      /* 
-            Success callback will be triggered for valid fingure 
+      console.log('activateTouchID : handler : 3')
+      /*
+            Success callback will be triggered for valid fingure
             */
       if (success) {
+        console.log('activateTouchID : handler : 4')
         return successCallBack();
       }
 
@@ -83,14 +88,16 @@ export function activateTouchID(successCallBack, failureCallBack) {
     })
     .catch(error => {
       /*
-            error -> will have specific information about the error 
+            error -> will have specific information about the error
             it may have the following error type
-            'LAErrorAuthenticationFailed' | 'LAErrorUserCancel' | 
-            'LAErrorUserFallback' | 'LAErrorSystemCancel'| 
-            'LAErrorPasscodeNotSet' | 'LAErrorTouchIDNotAvailable' | 
-            'LAErrorTouchIDNotEnrolled'| 'LAErrorTouchIDNotEnrolled' | 
+            'LAErrorAuthenticationFailed' | 'LAErrorUserCancel' |
+            'LAErrorUserFallback' | 'LAErrorSystemCancel'|
+            'LAErrorPasscodeNotSet' | 'LAErrorTouchIDNotAvailable' |
+            'LAErrorTouchIDNotEnrolled'| 'LAErrorTouchIDNotEnrolled' |
             'RCTTouchIDUnknownError' | 'RCTTouchIDNotSupported'
             */
+      console.log('activateTouchID : handler : 5')
       failureCallBack(error);
     });
 }
+// }

@@ -1,27 +1,39 @@
-import RNSecureKeyStore, { ACCESSIBLE } from 'react-native-secure-key-store';
+import RNSecureKeyStore from 'react-native-secure-key-store';
 
-export function SetKeyValueToStore(key, value, accessible, callBack) {
+export const SetKeyValueToStore=(key, value, storeSuccessCallback,storeErrorCallback) =>{
   RNSecureKeyStore.set(key, value).then(
     res => {
       console.log(res);
-      return callBack(res);
+      return storeSuccessCallback(res);
     },
     err => {
       console.log(err);
-      return callBack(err);
+      return storeErrorCallback(err);
     },
   );
 }
 
-export function GetKeyValueToStore(key, callBack) {
+export function GetKeyValueFromStore(key, retrieveSuccessCallback, retrieveErrorCallback) {
   RNSecureKeyStore.get(key).then(
     res => {
       console.log(res);
-      return callBack(res);
+      return retrieveSuccessCallback(res);
     },
     err => {
       console.log(err);
-      return callBack(err);
+      return retrieveErrorCallback(err);
+    },
+  );
+}
+export function RemoveValueFromStore(key, removeSuccessCallback,removeErrorCallback) {
+  RNSecureKeyStore.remove(key).then(
+    res => {
+      console.log(res);
+      return removeSuccessCallback(res);
+    },
+    err => {
+      console.log(err);
+      return removeErrorCallback(err);
     },
   );
 }
