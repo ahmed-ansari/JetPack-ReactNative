@@ -29,19 +29,24 @@ const styles = StyleSheet.create({
     backgroundColor:'#06748C',
     borderRadius: 8,
     height: 48,
-    paddingVertical: '5%',
-    paddingHorizontal: '5%',
+    // paddingVertical: '5%',
+    // paddingHorizontal: '5%',
+    // borderWidth:1,
+    // borderColor:'red',
+    justifyContent:'center',
+    alignItems:'center'
   },
   defaultText: {
     fontSize: 16,
     color: 'white',
     textAlign: 'center',
-    flex: 1,
   },
   container: {
     // flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center',
+    // borderWidth:1,
+    // borderColor:'yellow'
   },
 
 });

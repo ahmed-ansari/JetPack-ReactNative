@@ -15,10 +15,12 @@ export const styles = StyleSheet.create({
     borderWidth:1,
     borderColor:'blue',
     borderRadius:1,
-    fontSize:16
+    fontSize:16,
   },
   customButton:{
       width:'100%',
+      // justifyContent:'center',
+      // alignItems:'center'
   },
   labelStyle:{
     // borderColor:'red',
@@ -42,7 +44,7 @@ export const styles = StyleSheet.create({
     width:'100%',
     margin:10,
     // borderColor:'gray',
-    height:30,
+    height:50,
     // borderWidth:1,
     // borderRadius:8
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Button, TextInput, Alert, Platform } from 'react-native';
+import { View, Text, Button, TextInput, Alert, Platform, ScrollView } from 'react-native';
 import PropTypes from 'prop-types'
 import { Actions } from 'react-native-router-flux';
 import { strings, setLocale } from '../../locales/Lang';
@@ -60,7 +60,7 @@ class LoginComponent extends Component {
       alert('IOS : '+res)
       this.setState({isBiometric:res})
     }
-    else if(Platform.android === 'android'){
+    else if(Platform.OS === 'android'){
       alert('Android :'+res)
       this.setState({isBiometric:res})
   }
@@ -118,36 +118,41 @@ enableBioMetricErrorCallback=()=>{
 
   render() {
     return (
-      <View style={styles.viewStyle}>
-        <Text>{this.state.welcomText}</Text>
-        <Button
-          title='Click Me to change Language'
-          onPress={this.changeLanguare}
-          style={styles.buttonStyle}
-        />
-        <Button
-          title='Show Hamburger Menu'
-          onPress={this.showHamburgerMenu}
-          style={styles.buttonStyle}
-        />
-        <View style={styles.labelStyle}>
-          <Text>Pesistent Store (Kestore / Keychain)</Text>
-        </View>
-        <View style={styles.inputView}>
-          <TextInput
-            style={styles.inputStyle}
-            placeholder='Enter data to be stored'
-            value={this.state.inputData}
-            onChangeText={(text)=>{this.setState({inputData:text})}}
-          />
-        </View>
-        <View>
+      <ScrollView>
+        <View style={styles.viewStyle}>
+          <Text>{this.state.welcomText}</Text>
+          <View style={{marginTop:20}}>
+            <Button
+              title='Click Me to change Language'
+              onPress={this.changeLanguare}
+              style={styles.buttonStyle}
+            />
+          </View>
+          <View style={{marginTop:20}}>
+            <Button
+              title='Show Hamburger Menu'
+              onPress={this.showHamburgerMenu}
+              style={styles.buttonStyle}
+            />
+          </View>
+          <View style={styles.labelStyle}>
+            <Text>Pesistent Store (Kestore / Keychain)</Text>
+          </View>
+          <View style={styles.inputView}>
+            <TextInput
+              style={styles.inputStyle}
+              placeholder='Enter data to be stored'
+              value={this.state.inputData}
+              onChangeText={(text)=>{this.setState({inputData:text})}}
+            />
+          </View>
+          {/* <View> */}
           <GButton
             buttonStyle={styles.customButton}
             text='Store to Keystore/Keychain'
             onPress={()=>this.storeSecureData(this.state.inputData,this.storeSuccessCallback,this.storeErrorCallback)}
           />
-        </View>
+        {/* </View> */}
 
         <View style={styles.inputView}>
           <TextInput
@@ -155,36 +160,37 @@ enableBioMetricErrorCallback=()=>{
             value={this.state.outputData}
           />
         </View>
-        <View>
+        {/* <View> */}
           <GButton
             buttonStyle={styles.customButton}
             text='Retrieve from Keystore/Keychain'
             onPress={()=>this.retrieveSecureData('secureData',this.retrieveSuccessCallback,this.retrieveErrorCallback)}
           />
-        </View>
+        {/* </View> */}
         <View>
           <View style={styles.labelStyle}>
             <Text>Biometric authentication (TouchID / FaceID)</Text>
           </View>
         </View>
-        <View>
+        {/* <View> */}
           <GButton
             buttonStyle={styles.customButton}
             text='Check TouchID/FaceID'
             onPress={()=>{this.checkBiometrics()}}
           />
-        </View>
+        {/* </View> */}
         {this.state.isBiometric && (
-          <View>
+          // <View>
             <GButton
               buttonStyle={[styles.customButton,{marginTop:20}]}
               text='Enable TouchID/FaceID'
               onPress={()=>{this.enableBioMetric()}}
             />
-          </View>
+          // </View>
         )
         }
       </View>
+      </ScrollView>
     );
   }
 }
