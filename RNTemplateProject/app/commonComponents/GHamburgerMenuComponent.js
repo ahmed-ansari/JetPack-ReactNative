@@ -21,46 +21,36 @@ import {
   Body,
   Container,
   Content,
-  List
+  List,
 } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
 /* Custom Imports */
 import { AppConstant } from '../appConstants';
-import * as hamburgerActions from '../actions/hamburgerActions'
-import { scale } from '../utils/resolution'
-
-
+import * as hamburgerActions from '../actions/hamburgerActions';
+import { scale } from '../utils/resolution';
 
 const styles = StyleSheet.create({
   icon: {
     color: AppConstant.colors.primary,
-    height:24,
-    width:24
+    height: 24,
+    width: 24,
   },
   menuName: {
     color: AppConstant.colors.primaryColor,
     fontSize: AppConstant.fontSize.sixteen,
-    lineHeight: AppConstant.lineHeight.twentyFour
+    lineHeight: AppConstant.lineHeight.twentyFour,
   },
   rightArrow: {
     color: AppConstant.colors.primaryColor,
     height: 24,
     width: 24,
-    marginBottom: 20
+    marginBottom: 20,
   },
 });
 
-const GHamburgerLitsItem = ({
-  name,
-  icon,
-  ...props
-}) => (
-  <ListItem
-    icon
-    noBorder
-    onPress={() =>props.onPress(name)}
-  >
+const GHamburgerLitsItem = ({ name, icon, ...props }) => (
+  <ListItem icon noBorder onPress={() => props.onPress(name)}>
     <Left>
       <Button transparent>
         <Icon type="Feather" name={icon} style={styles.icon} />
@@ -70,7 +60,12 @@ const GHamburgerLitsItem = ({
       <Text style={styles.menuName}>{name}</Text>
     </Body>
     <Right>
-      <Icon style={styles.rightArrow} type="Feather" active name="chevron-right" />
+      <Icon
+        style={styles.rightArrow}
+        type="Feather"
+        active
+        name="chevron-right"
+      />
     </Right>
   </ListItem>
 );
@@ -80,31 +75,29 @@ All the props parameters should be declared here
 GHamburgerLitsItem.propTypes = {
   name: PropTypes.any.isRequired,
   icon: PropTypes.any.isRequired,
-  onPress: PropTypes.func.isRequired
+  onPress: PropTypes.func.isRequired,
 };
 /*
 Default values for props paramers should be defined here.
 */
 GHamburgerLitsItem.defaultProps = {};
 
+class GHamburgerMenu extends React.Component {
+  constructor(props) {
+    super(props);
 
-
-class GHamburgerMenu extends React.Component{
-  constructor(props){
-    super(props)
-
-    this.handleDrawerSelection = this.handleDrawerSelection.bind(this)
+    this.handleDrawerSelection = this.handleDrawerSelection.bind(this);
   }
 
-handleDrawerSelection(name){
-    Actions.drawerClose()
+  handleDrawerSelection(name) {
+    Actions.drawerClose();
     alert(name);
 
     // this.props.handleDrawerItemSelected()
   }
 
-  render(){
-    return(
+  render() {
+    return (
       <Container>
         <Content>
           {/* <View style={styles.profileContainer}>
@@ -136,26 +129,24 @@ handleDrawerSelection(name){
           <View style={styles.menuContainer}>
             <List
               dataArray={this.props.menus}
-              renderRow={(item) => (
+              renderRow={item => (
                 <GHamburgerLitsItem
                   name={item.name}
                   icon={item.icon}
                   onPress={this.handleDrawerSelection}
-                />)
-              }
+                />
+              )}
             />
           </View>
         </Content>
       </Container>
-
-    )
+    );
   }
-
 }
 
 GHamburgerMenu.propTypes = {
-  menus:PropTypes.array.isRequired,
-  handleDrawerItemSelected:PropTypes.func.isRequired
+  menus: PropTypes.array.isRequired,
+  handleDrawerItemSelected: PropTypes.func.isRequired,
 };
 /*
 Default values for props paramers should be defined here.
@@ -164,12 +155,12 @@ GHamburgerMenu.defaultProps = {};
 
 const mapStateToProps = (state /* , props */) => {
   return {
-    menus:state.initialState.sideMenuList
+    menus: state.initialState.sideMenuList,
   };
 };
 
 const mapDispatchToProps = {
-  ...hamburgerActions
+  ...hamburgerActions,
 };
 
 export default connect(

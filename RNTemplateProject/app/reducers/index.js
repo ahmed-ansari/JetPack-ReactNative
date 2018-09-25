@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import login from './loginReducer';
-import initialState from './initialStateReducer'
+import initialState from './initialStateReducer';
 
 export default combineReducers({
   login,
-  initialState
+  initialState,
 });
 
 export const getLogin = ({ login }) => login;

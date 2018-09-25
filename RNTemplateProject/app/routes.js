@@ -2,11 +2,17 @@ import React, { Component } from 'react';
 // import PropTypes from 'prop-types';
 // import { Linking } from 'react-native';
 // import { connect } from 'react-redux';
-import { Router, Scene, Actions, Stack , Drawer } from 'react-native-router-flux';
+import {
+  Router,
+  Scene,
+  Actions,
+  Stack,
+  Drawer,
+} from 'react-native-router-flux';
 import { Icon } from 'native-base';
-import { GHamburgerMenu } from './commonComponents'
+import { GHamburgerMenu } from './commonComponents';
 import LoginComponent from './screens/login';
-import { scale } from './utils/resolution'
+import { scale } from './utils/resolution';
 
 class Routes extends Component {
   constructor(props) {
@@ -14,15 +20,15 @@ class Routes extends Component {
     this.state = {};
   }
 
-  componentDidMount() { }
+  componentDidMount() {}
 
-  shouldComponentUpdate(/* nextProps,nextState */) { }
+  shouldComponentUpdate(/* nextProps,nextState */) {}
 
-  componentDidUpdate(/* prevProps */) { }
+  componentDidUpdate(/* prevProps */) {}
 
-  componentWillUnmount() { }
+  componentWillUnmount() {}
 
-  componentDidCatch(/* error,errorInfo */) { }
+  componentDidCatch(/* error,errorInfo */) {}
 
   render() {
     return (
@@ -34,8 +40,7 @@ class Routes extends Component {
             contentComponent={GHamburgerMenu}
             drawerPosition="right"
             drawerIcon={<Icon name="menu" size={scale(30)} />}
-            title='JetPack-React Native'
-
+            title="JetPack-React Native"
           >
             <Scene key="launch" component={LoginComponent} initial hideNavBar />
           </Drawer>

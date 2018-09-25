@@ -16,25 +16,20 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  Text,
-  View,
-  TouchableOpacity,
-  StyleSheet,
-} from 'react-native';
+import { Text, View, TouchableOpacity, StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   defaultButton: {
     // alignSelf: 'stretch',
-    backgroundColor:'#06748C',
+    backgroundColor: '#06748C',
     borderRadius: 8,
     height: 48,
     // paddingVertical: '5%',
     // paddingHorizontal: '5%',
     // borderWidth:1,
     // borderColor:'red',
-    justifyContent:'center',
-    alignItems:'center'
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   defaultText: {
     fontSize: 16,
@@ -48,21 +43,14 @@ const styles = StyleSheet.create({
     // borderWidth:1,
     // borderColor:'yellow'
   },
-
 });
 
-const GButton = ({
-  buttonStyle,
-  textStyle,
-  text,
-  onPress
-}) => (
+const GButton = ({ buttonStyle, textStyle, text, onPress }) => (
   <TouchableOpacity
-    style={[
-      styles.defaultButton,
-      buttonStyle,
-    ]}
-    onPress={() => {onPress()}}
+    style={[styles.defaultButton, buttonStyle]}
+    onPress={() => {
+      onPress();
+    }}
   >
     <View style={styles.container}>
       <Text style={[styles.defaultText, textStyle]}>{text.toUpperCase()}</Text>

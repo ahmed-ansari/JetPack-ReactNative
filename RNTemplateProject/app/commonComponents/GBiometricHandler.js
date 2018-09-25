@@ -63,7 +63,7 @@ if the fingure print is wrong and it will throw the error message
 In Android it will show the error pop on the first wrong touch itself
 */
 export function activateTouchID(successCallBack, failureCallBack) {
-  console.log('activateTouchID : handler :')
+  console.log('activateTouchID : handler :');
   const optionalConfigObject = {
     /* Applicable only for Android */
     title: strings('touchId.popupTitle'),
@@ -72,15 +72,15 @@ export function activateTouchID(successCallBack, failureCallBack) {
     /* Applicable only for iOS (if empty, then label is hidden) */
     fallbackLabel: strings('touchId.fallbackText'),
   };
-  console.log('activateTouchID : handler : 2')
+  console.log('activateTouchID : handler : 2');
   TouchID.authenticate(strings('touchId.descriptionText'), optionalConfigObject)
     .then(success => {
-      console.log('activateTouchID : handler : 3')
+      console.log('activateTouchID : handler : 3');
       /*
             Success callback will be triggered for valid fingure
             */
       if (success) {
-        console.log('activateTouchID : handler : 4')
+        console.log('activateTouchID : handler : 4');
         return successCallBack();
       }
 
@@ -96,7 +96,7 @@ export function activateTouchID(successCallBack, failureCallBack) {
             'LAErrorTouchIDNotEnrolled'| 'LAErrorTouchIDNotEnrolled' |
             'RCTTouchIDUnknownError' | 'RCTTouchIDNotSupported'
             */
-      console.log('activateTouchID : handler : 5')
+      console.log('activateTouchID : handler : 5');
       failureCallBack(error);
     });
 }

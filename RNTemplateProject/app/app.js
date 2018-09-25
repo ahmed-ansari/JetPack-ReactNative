@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import configureStore from './store/configureStore';
 import RootComponent from './rootComponent';
 import { AppConstant } from './appConstants';
-import { strings } from './locales/Lang'
+import { strings } from './locales/Lang';
 
 /*
 place all the initial states needs to be start with app.
@@ -14,43 +14,43 @@ const initialState = {
   wsVersion: '<WS version',
   appBuildKey: '<application key>',
   appID: '<added appId if required>',
-  sideMenuList:[
+  sideMenuList: [
     {
       id: AppConstant.menu.claimHistory,
       icon: 'clock',
-      name: strings('menu.claimHistory')
+      name: strings('menu.claimHistory'),
     },
     {
       id: AppConstant.menu.myBenefits,
       icon: 'award',
-      name: strings('menu.myBenefits')
+      name: strings('menu.myBenefits'),
     },
     {
       id: AppConstant.menu.preAdmission,
       icon: 'clipboard',
-      name: strings('menu.preAdmission')
+      name: strings('menu.preAdmission'),
     },
     {
       id: AppConstant.menu.accountSettings,
       icon: 'settings',
-      name: strings('menu.accountSettings')
+      name: strings('menu.accountSettings'),
     },
     {
       id: AppConstant.menu.changeLanguage,
       icon: 'globe',
-      name: strings('menu.changeLanguage')
+      name: strings('menu.changeLanguage'),
     },
     {
       id: AppConstant.menu.helpSupport,
       icon: 'help-circle',
-      name: strings('menu.helpSupport')
+      name: strings('menu.helpSupport'),
     },
     {
       id: AppConstant.menu.logout,
       icon: 'log-out',
-      name: strings('menu.logout')
+      name: strings('menu.logout'),
     },
-  ]
+  ],
 };
 const store = configureStore({ initialState });
 /*

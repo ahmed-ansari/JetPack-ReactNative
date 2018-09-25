@@ -9,7 +9,7 @@ export default {
   touchId: {
     popupTitle: 'Enable Fingureprint ID',
     fallbackText: 'Show Passcode',
-    descriptionText: 'Place your finguretip on the home button to login'
+    descriptionText: 'Place your finguretip on the home button to login',
   },
   menu: {
     claimHistory: 'Claim History',

@@ -1,6 +1,11 @@
 import RNSecureKeyStore from 'react-native-secure-key-store';
 
-export const SetKeyValueToStore=(key, value, storeSuccessCallback,storeErrorCallback) =>{
+export const SetKeyValueToStore = (
+  key,
+  value,
+  storeSuccessCallback,
+  storeErrorCallback,
+) => {
   RNSecureKeyStore.set(key, value).then(
     res => {
       console.log(res);
@@ -11,9 +16,13 @@ export const SetKeyValueToStore=(key, value, storeSuccessCallback,storeErrorCall
       return storeErrorCallback(err);
     },
   );
-}
+};
 
-export function GetKeyValueFromStore(key, retrieveSuccessCallback, retrieveErrorCallback) {
+export function GetKeyValueFromStore(
+  key,
+  retrieveSuccessCallback,
+  retrieveErrorCallback,
+) {
   RNSecureKeyStore.get(key).then(
     res => {
       console.log(res);
@@ -25,7 +34,11 @@ export function GetKeyValueFromStore(key, retrieveSuccessCallback, retrieveError
     },
   );
 }
-export function RemoveValueFromStore(key, removeSuccessCallback,removeErrorCallback) {
+export function RemoveValueFromStore(
+  key,
+  removeSuccessCallback,
+  removeErrorCallback,
+) {
   RNSecureKeyStore.remove(key).then(
     res => {
       console.log(res);

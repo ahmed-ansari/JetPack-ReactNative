@@ -16,8 +16,7 @@ const Config = {
   registerationURL:
     'https://uat.libertyinsurance.com.hk/LHC-RN/registralation.jsp',
   // URL for forgot password
-  forgorPassword:
-    'https://',
+  forgorPassword: 'https://',
   //webURL for PIC Eng
   picEng: 'https://',
   //webURL for PIC chin

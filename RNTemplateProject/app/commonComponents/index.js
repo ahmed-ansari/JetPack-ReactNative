@@ -1,10 +1,10 @@
-import GHamburgerMenu   from './GHamburgerMenuComponent';
+import GHamburgerMenu from './GHamburgerMenuComponent';
 import GBadgeWithText from './GBadgeWithText';
 import GCommonWebView from './GCommonWebView';
 import GPersistantStore from './GPersistantStore';
 // import GBiometricHandler from './GBiometricHandler';
-import * as GRSAAlgorithmGenerator from './GRSAAlgorithmGenerator'
-import GButton from './GButton'
+import * as GRSAAlgorithmGenerator from './GRSAAlgorithmGenerator';
+import GButton from './GButton';
 
 export {
   GHamburgerMenu,
@@ -12,5 +12,5 @@ export {
   GCommonWebView,
   GPersistantStore,
   GRSAAlgorithmGenerator,
-  GButton
+  GButton,
 };

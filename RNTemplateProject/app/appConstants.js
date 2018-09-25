@@ -25,7 +25,7 @@ export const AppConstant = {
     heading: '#333740',
     night: '#1A1446',
     white: '#FFF',
-    lightgray:'#F6F7F9',
+    lightgray: '#F6F7F9',
     darkYellow: '#998320',
     greyBar: '#cbcdcc',
     pink: '#FF0048',
@@ -38,8 +38,7 @@ export const AppConstant = {
     greyColor: 'grey',
     claimantValue: '#5F6269',
     claimantLabel: '#94979B',
-    webViewHeadingColor: '#253d68'
-
+    webViewHeadingColor: '#253d68',
   },
 
   fontSize: {
@@ -55,8 +54,7 @@ export const AppConstant = {
     twentyFour: 24,
     sixteen: 16,
     fourteen: 14,
-    twenty: 20
-
+    twenty: 20,
   },
   lineHeight: {
     twenty: 20,
@@ -91,6 +89,6 @@ export const AppConstant = {
     accountSettings: 'accountSettings',
     changeLanguage: 'changeLanguage',
     helpSupport: 'helpSupport',
-    logout: 'logout'
-  }
+    logout: 'logout',
+  },
 };
