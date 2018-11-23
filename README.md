@@ -16,5 +16,5 @@ React Native base template project. This template is configured with Redux, reac
 
 To add custom fonts for your project, add new font family (.ttf or otf) into the foloder 'app/assets/fonts'. Once added the required fonts, got to terminal and run "react-native link". This will link the font to android project and also ios project. You can verify the same in the android assets folder and ios fonts floder.
 
-#Start/run the dev server in different Port
+# Start/run the dev server in different Port
 react-native start --port 9988
