@@ -18,3 +18,11 @@ To add custom fonts for your project, add new font family (.ttf or otf) into the
 
 # Start/run the dev server in different Port
 react-native start --port 9988
+
+# Stope double tap on buttom
+https://github.com/parakhod/react-navigation-redux-debouncer
+
+# Handle and fix performance issues
+
+https://novemberfive.co/blog/react-performance-navigation-animations
+
