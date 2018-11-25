@@ -28,4 +28,4 @@ http://facebook.github.io/react-native/docs/performance#running-in-development-m
 
 # stop animation while navigating between scene. This improves performance. Add duration={0}
 
-<Stack key="root" gesturesEnabled={false} duration={0}>
+ ** <Stack key="root" gesturesEnabled={false} duration={0}>
