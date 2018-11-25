@@ -26,3 +26,6 @@ https://github.com/parakhod/react-navigation-redux-debouncer
 
 https://novemberfive.co/blog/react-performance-navigation-animations
 
+# Remove Console.log() in production build alone or in the debug build also
+https://babeljs.io/docs/en/babel-plugin-transform-remove-console/
+http://facebook.github.io/react-native/docs/performance#running-in-development-mode-dev-true
