@@ -19,13 +19,12 @@ To add custom fonts for your project, add new font family (.ttf or otf) into the
 # Start/run the dev server in different Port
 react-native start --port 9988
 
-# Stope double tap on buttom
-https://github.com/parakhod/react-navigation-redux-debouncer
-
 # Handle and fix performance issues
-
 https://novemberfive.co/blog/react-performance-navigation-animations
 
 # Remove Console.log() in production build alone or in the debug build also
 https://babeljs.io/docs/en/babel-plugin-transform-remove-console/
 http://facebook.github.io/react-native/docs/performance#running-in-development-mode-dev-true
+
+# stop animation while navigating between scene. This improves performance. Add duration={0}
+<Stack key="root" gesturesEnabled={false} duration={0}>
