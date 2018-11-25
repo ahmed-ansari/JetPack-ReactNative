@@ -27,4 +27,5 @@ https://babeljs.io/docs/en/babel-plugin-transform-remove-console/
 http://facebook.github.io/react-native/docs/performance#running-in-development-mode-dev-true
 
 # stop animation while navigating between scene. This improves performance. Add duration={0}
+
 <Stack key="root" gesturesEnabled={false} duration={0}>
