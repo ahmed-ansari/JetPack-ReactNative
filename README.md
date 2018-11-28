@@ -30,3 +30,13 @@ http://facebook.github.io/react-native/docs/performance#running-in-development-m
 # stop animation while navigating between scene. This improves performance. Add duration={0}
 
  'Stack key="root" gesturesEnabled={false} duration={0}'
+ 
+ # Useful links
+ Rooted device:
+ https://www.npmjs.com/package/react-native-is-device-rooted
+ 
+ is required app installed?
+ https://github.com/redpandatronicsuk/react-native-check-app-install
+
+configure fabric crashlytics in Android:
+https://medium.com/komenco/beta-testing-your-react-native-android-application-with-crashlytics-483c7e66a423
